@@ -5,7 +5,7 @@
 #include <iostream>
 #include "position.h"
 
-
+void setX(Position &, int);
 int main()
 {
 	Position dog(10, 50);
@@ -13,7 +13,10 @@ int main()
 	
 	dog.setPosition(66, 75);
 
+	
+	setX (dog, 200000);
 	dog.getPosition();
+
 
 	const Position house(400, 600);
 
@@ -23,4 +26,7 @@ int main()
 	system("pause");
     return 0;
 }
-
+void setX(Position & obj, int value)
+{
+	obj.x = value;
+}
